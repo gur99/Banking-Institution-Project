@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import style & CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- JS import -->
+    <script src="app.js" defer></script>
+    <script src="mainDash.js" defer></script>
+    <script src="dash.js" defer></script>
+
+    <title>DashBoard Cha-Ching BankAccount</title>
+</head>
+
+<body onload="displayLastLogin()">
+
+    <nav id="transactionsNav">
+        <div id="dashboardNav">
+
+
+            <div id="helloMessageContainer">
+                <h2 id="helloMessage"></h2>
+                <h3 id="dateDisplay"></h3>
+            </div>
+        </div>
+
+
+        <div id="center">
+            <h2><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp;Log out</a></h2>
+        </div>
+
+        <a href="dashboard.html">
+            <img src="IMG/logo_transparent.png" alt="ops, something went wrong">
+        </a>
+    </nav>
+
+
+
+
+
+
+    <div class="MainContainer">
+
+
+        <aside class="sideNav">
+            <a href="dashboard.html">
+                <div>
+                    <h3>Home</h3>
+                </div>
+            </a>
+            <!-- <div>
+                <h3>Investment</h3>
+            </div>
+            <div>
+                <h3>Breaking Deals</h3>
+            </div> -->
+            <a href="additional_actions.html">
+                <div>
+                    <h3>Additional actions</h3>
+
+                </div>
+            </a>
+        </aside>
+
+
+        <main class="mainDashboard">
+
+            <div class="mainHeader">
+
+                <div id="ExpenseTracker">
+                    <h2>My credit cards:</h2>
+                    <div id="LastMonthCharge"></div>
+                    <div id="FutureBilling"></div>
+                    <div id="billingMethod"></div>
+                </div>
+            </div>
+
+
+            <!-- 
+            <div class="creditWrapper" title="Press to view your transactions">
+
+                <a href="transactions.html">
+                    <div class="credit-card">
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="head">
+                            <div></div>
+                            <div>Cha-Ching Virtual Credit Card</div>
+                        </div>
+                        <div class="number">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="tail">
+                            <div id="cardOwner"></div>
+                            <div class="exp">Exp:
+                                <span class="expDate"></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div> -->
+
+        </main>
+
+        <aside class="transAside">
+            <h2>Last Transactions</h2>
+
+            <div class="transactionContainer">
+
+
+                <!-- <div class="transaction">
+                    <div class="dot"></div>
+                    <p>Transaction 1: $5.75 at Starbucks</p>
+                </div>
+                <div class="line"></div>
+
+                <div class="transaction">
+                    <div class="dot"></div>
+                    <p>Transaction 2: $52.99 at Amazon</p>
+                </div>
+                <div class="line"></div>
+
+                <div class="transaction">
+                    <div class="dot"></div>
+                    <p>Transaction 3: $4.50 at Dunkin' Donuts</p>
+                </div> -->
+            </div>
+        </aside>
+
+
+    </div>
+
+</body>
+
+</html>

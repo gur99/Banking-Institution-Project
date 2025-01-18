@@ -1,0 +1,1021 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: url('IMG/background2.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Lato';
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+/* NAVIGATOR */
+nav {
+    color: whitesmoke;
+    background-color: rgb(4, 4, 99);
+    width: 100%;
+}
+
+nav img {
+    padding: 0;
+    margin-left: 5em;
+    width: 150px;
+    height: 150px;
+
+}
+
+nav .formImg {
+    width: 55%;
+    text-align: center;
+    margin-left: 10em;
+
+}
+
+
+
+/* Container #1 */
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    padding-top: 1em;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.589);
+}
+
+/* Container #2 */
+.container2 {
+    height: fit-content;
+    background: rgb(214, 209, 209);
+    border-top-left-radius: 10em;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 4em;
+    padding-top: 4em;
+}
+
+.container2 div h1 {
+    color: #0c2c5f;
+}
+
+.container2 div p {
+    font-size: large;
+}
+
+
+.container2 div {
+    padding: 2em;
+    margin: 5em;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    min-height: 12em;
+    height: fit-content;
+    width: 20%;
+}
+
+/* Container #3 */
+.container3 {
+    height: 600px;
+    background: url('IMG/happyLife1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    /* background: white; */
+
+
+}
+
+/* Container #4 */
+.container4 {
+    height: 400px;
+    background: rgb(214, 209, 209);
+    border-bottom-right-radius: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container4 .wrapper {
+    color: #0c2c5f;
+    font-weight: bold;
+    font-size: large;
+    width: 75%;
+    height: fit-content;
+    padding: 1em;
+    margin: 0;
+    /* background-color: whitesmoke; */
+    border-radius: 15px;
+}
+
+/* SignUp Form */
+#signUpForm {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-bottom: 1.2em;
+    width: 30%;
+    justify-self: center;
+    background-color: whitesmoke;
+    min-height: 40em;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+#signUpForm input[type="text"],
+[type="email"],
+[type="password"],
+[type="date"],
+[type="radio"] {
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border: 1px solid rgb(224, 224, 224);
+}
+
+#signUpForm header {
+    text-align: center;
+
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+#signUpForm h1 {
+    padding-top: 1em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    color: #4d8ff7;
+}
+
+#signUpForm h3 {
+    padding: 0;
+    margin: 0;
+    color: #81a6e2;
+    padding-bottom: 0.5em;
+}
+
+/* SIGN UP-MAIN */
+#signUpForm main {
+    width: 85%;
+    justify-self: center;
+    /* border: 1px solid blue; */
+    margin-top: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/* Full name */
+#fullName {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#fullName input[type="text"] {
+    min-width: 8em;
+}
+
+/* Email */
+#divEmail {
+    width: 100%;
+}
+
+input[type="email"] {
+    width: 96%;
+}
+
+/* Date & Gender */
+
+#dateAndGender {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#gender {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-bottom: 0.5em;
+}
+
+#gender label {
+    height: fit-content;
+    text-align: center;
+    border: 1px solid rgb(224, 224, 224);
+    background-color: white;
+    align-self: center;
+    padding: 0.15em;
+    width: 40%;
+    min-width: 85px;
+    color: rgb(143, 143, 143);
+}
+
+#divUsername,
+#divPassword {
+    width: 100%;
+}
+
+
+/* Description */
+.description {
+    width: 100%;
+    color: #81a6e2;
+    font-size: small;
+}
+
+#divCredit {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 2em;
+
+}
+
+
+#submitBtn {
+    text-align: center;
+    width: 100%;
+}
+
+/* Buttons */
+#signUpBtn {
+    width: 25%;
+    padding: 1em;
+    margin-top: 1em;
+    cursor: pointer;
+    background-color: #5e9f77;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+
+#signUpBtn:hover {
+    background-color: #78c595;
+}
+
+
+input[type=button] {
+    cursor: pointer;
+}
+
+#logIntButton {
+    font-family: 'Lato';
+    font-weight: bold;
+    text-align: left;
+    margin-left: 8em;
+    padding: 1em;
+    width: 150px;
+    color: whitesmoke;
+    font-size: larger;
+    background-color: #4d8ff7;
+    border: none;
+    border-radius: 5px;
+}
+
+#logIntButton:hover {
+    background-color: #669cf3;
+}
+
+
+
+#registerButton {
+    font-family: 'Lato';
+    font-weight: bold;
+    text-align: left;
+    margin-left: 8em;
+    padding: 1em;
+    width: 150px;
+    color: whitesmoke;
+    font-size: larger;
+    background-color: #0c2c5f;
+    border: none;
+    border-radius: 5px;
+}
+
+#registerButton:hover {
+    background-color: #25416e;
+}
+
+/* Errors: */
+
+#ccExpirationError,
+#ccNumberError,
+#dobError,
+#passwordError,
+#emailError,
+#usernameError,
+#loginPasswordError,
+#loginUserError {
+    color: red;
+    font-size: smaller;
+    padding-bottom: 0.5em;
+}
+
+
+/* Login Page */
+
+.wrapper {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    /* background-color: whitesmoke; */
+}
+
+#loginContainer {
+    border: 1px solid red;
+    background-color: #729bdd;
+    width: 30%;
+}
+
+.loginBox {
+    text-align: center;
+    border: 1px solid red;
+    width: 25em;
+    background-color: rgb(233, 233, 233);
+
+}
+
+
+#registerLink:hover {
+    text-decoration: underline;
+}
+
+.loginField {
+    font-size: medium;
+    border: none;
+    border-bottom: 1px solid #0c2c5f;
+    background-color: rgba(233, 233, 233, 0.925);
+    padding: 0.5em;
+}
+
+#loginButton {
+    margin-top: 1em;
+    color: whitesmoke;
+    width: 8em;
+    background-color: #25416e;
+    border-radius: 5px;
+}
+
+#loginButton {
+    padding: 1em;
+    font-weight: bold;
+    font-size: medium;
+}
+
+#loginButton:hover {
+    background-color: #5478b3;
+    color: white;
+}
+
+
+/* HomePage */
+
+.container3 .wrapper {
+    margin: 0;
+    padding-top: 4em;
+}
+
+.quotes {
+    border-radius: 15px;
+    background-color: rgba(240, 248, 255, 0.856);
+    color: #25416e;
+    font-weight: bold;
+    font-size: 3em;
+    font-family: 'Lato';
+    padding: 0.2em;
+}
+
+/* Dashboard */
+
+#helloMessageContainer {
+    padding-left: 1em;
+    align-self: center;
+}
+
+#helloMessage {
+    color: whitesmoke;
+    min-width: 16em;
+    justify-self: start;
+
+}
+
+#dashboardNav {
+    display: grid;
+    grid-template-columns: 80% 20%;
+
+}
+
+#dashboardNav a {
+    justify-self: end;
+    padding-right: 1em;
+}
+
+
+
+#center {
+    color: white;
+    align-self: center;
+    justify-items: end;
+}
+
+#center a {
+    color: whitesmoke;
+}
+
+#center a:hover {
+    color: rgb(185, 185, 185);
+}
+
+#center h2 {
+    width: fit-content;
+}
+
+
+
+
+/* Credit Card Template */
+
+.creditWrapper {
+    box-sizing: border-box;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: start; */
+    flex-wrap: wrap;
+    padding: 2em;
+
+}
+
+
+
+.credit-card {
+    background-color: #18181b;
+    color: #a1a1aa;
+    padding: 30px 30px;
+    border-radius: 0.5rem;
+    width: 350px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.creditWrapper .credit-card:nth-child(1) {
+    background-color: #090946;
+    /* First card color */
+}
+
+.creditWrapper .credit-card:nth-child(2) {
+    background-color: #3b3b3f;
+    /* Second card color */
+}
+
+.creditWrapper .credit-card:nth-child(3) {
+    background-color: #2c2c30;
+    /* Third card color */
+}
+
+
+
+.credit-card:hover {
+    scale: 1.1;
+}
+
+.head,
+.number,
+.tail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    z-index: 10;
+}
+
+.head {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.number {
+    margin-top: auto;
+    font-size: 1.75em;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: #d4d4d8;
+}
+
+.exp {
+    font-size: 0.8em;
+}
+
+.exp-date {
+    color: #d4d4d8;
+    font-size: 1.3rem;
+}
+
+.circle1 {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: #991b1b;
+    border-radius: 100%;
+    transform: translateY(-60%) translateX(100%);
+}
+
+.circle2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #854d0e;
+    border-radius: 100%;
+    transform: translateY(190%);
+}
+
+
+
+
+
+
+.MainContainer {
+    background-color: #bcbfc4;
+    display: grid;
+    grid-template-columns: 12% 58% 28%;
+    justify-content: space-between;
+}
+
+.MainContainer main {
+    min-height: fit-content;
+    width: 100%;
+    justify-self: center;
+    display: block;
+    justify-items: center;
+    background-color: rgb(228, 226, 223);
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.MainContainer main h2 {
+    color: #4d8ff7;
+    justify-self: start;
+}
+
+.MainContainer .transAside {
+    margin-bottom: 1em;
+    margin-top: 1em;
+    padding-left: 1em;
+    background-color: rgb(228, 226, 223);
+}
+
+
+.sideNav {
+    background-color: rgb(1, 1, 43);
+    color: whitesmoke;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 150px);
+}
+
+.sideNav div {
+    padding-left: 1em;
+    align-content: center;
+    border-bottom: 1px solid rgb(123, 123, 231);
+
+}
+
+
+.sideNav a {
+    text-decoration: none;
+    color: white;
+}
+
+.sideNav div:hover {
+    background-color: rgb(23, 23, 78);
+    color: white;
+
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+.transAside h2 {
+    color: #4d8ff7;
+}
+
+.transactionContainer {
+    color: #131335;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* ----------------------------------------------------------------------------------------- */
+.dot {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #131335;
+    border-radius: 50%;
+    background-color: transparent;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot:hover {
+    background-color: black;
+    transform: scale(1.3);
+    /* Slightly increase the size of the dot */
+}
+
+.line {
+    width: 2px;
+    height: 0;
+    /* Initial height to make it invisible */
+    background-color: #26269b;
+    transition: height 0.4s ease-in-out;
+    /* Smooth line expansion */
+}
+
+.transaction:hover+.line {
+    height: 20px;
+    /* Expands the line when the transaction is hovered over */
+}
+
+.transaction {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.transaction p {
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.transaction p:hover {
+    color: #26269b;
+    /* Changes text color on hover */
+}
+
+/* Shared hover effect for .dot and <p> */
+.transaction:hover .dot {
+    background-color: black;
+    transform: scale(1.3);
+    /* Slightly increase the size of the dot */
+}
+
+
+/* ------------------------------------------------------------------------------------------------ */
+/* 
+.transaction {
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #131335;
+    border-radius: 50%;
+    background-color: transparent;
+    margin-right: 10px;
+}
+
+.dot:hover {
+    background-color: black;
+}
+
+.line {
+    width: 2px;
+    height: 20px;
+    background-color: #26269b;
+    ;
+} */
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+/* Transactions */
+#transactionsNav {
+    display: grid;
+    grid-template-columns: 19% 60% 19%;
+    justify-content: space-between;
+}
+
+#transactionsNav a {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: end;
+}
+
+#transactionsNav img {
+    padding-right: 1em;
+}
+
+
+.barChart {
+    padding: 1em;
+    justify-items: center;
+    width: 75%;
+    height: 25%;
+    /* height: fit-content; */
+}
+
+.pieChart {
+    padding: 1em;
+    width: 50%;
+    height: 25%;
+
+    /* height: fit-content; */
+
+}
+
+
+.mainHeader {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+    padding-left: 2em;
+    width: 100%;
+    justify-self: start;
+}
+
+.mainHeader #ExpenseTracker {
+    margin-top: 1em;
+    width: 62%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.mainHeader #ExpensesByMonth {
+    width: 33%;
+    border-left: 1px solid #a1a1aa;
+    padding-left: 2em;
+    margin-top: 1em;
+}
+
+#monthSelect {
+    width: 12em;
+    background-color: #617da8;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+#monthSelect option:nth-child(even) {
+    background-color: #899dbd;
+}
+
+#monthSelect option:nth-child(odd) {
+    background-color: #a1aec4;
+}
+
+#monthSelect option:first-child {
+    background-color: rgb(197, 187, 187);
+}
+
+.mainHeader #LastMonthCharge,
+#FutureBilling {
+    color: #131335;
+    font-weight: bold;
+}
+
+#billingMethod {
+    color: #131335;
+}
+
+
+#ListOfMonthExpenses {
+    margin-top: 2em;
+    width: 100%;
+    justify-self: center;
+    /* border: 1px solid navy; */
+
+}
+
+#table {
+    margin-bottom: 2em;
+    width: 90%;
+    justify-self: space-around;
+}
+
+.row {
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 15% 50% 15%;
+    /* border: 1px solid red; */
+}
+
+.row:nth-child(even) {
+    background-color: #9eebd4;
+}
+
+.row:nth-last-child(1) {
+    margin-bottom: 1em;
+}
+
+.row div {
+    border: 1px solid #a6aab1;
+    padding: 0.4em;
+
+}
+
+.listHeader {
+    padding: 0.2em;
+    background-color: #088F8F;
+    color: white;
+    font-weight: bold;
+
+}
+
+
+
+
+
+.MainContainerTransactions {
+    background-color: #bcbfc4;
+    display: grid;
+    grid-template-columns: 12% 80%;
+    gap: 4%;
+}
+
+.MainContainerTransactions main {
+    min-height: fit-content;
+    width: 100%;
+    justify-self: center;
+
+    display: block;
+    justify-items: center;
+    background-color: rgb(228, 226, 223);
+    border-radius: 5px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+
+}
+
+.MainContainerTransactions main h2 {
+    color: #4d8ff7;
+    justify-self: start;
+}
+
+
+
+.sideNav {
+    background-color: rgb(1, 1, 43);
+    color: whitesmoke;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    min-width: 8em;
+}
+
+.sideNav div {
+    /* min-width: 20em; */
+    height: 8em;
+    padding-left: 1em;
+    align-content: center;
+    border-bottom: 1px solid rgb(63, 63, 184);
+
+}
+
+#SelectedMonth {
+    color: #131335;
+    font-weight: bold;
+}
+
+#tblHeaderDiv {
+    width: 100%;
+    text-align: center;
+}
+
+#tableHeaderMonthSelected {
+    /* padding-left: 3em; */
+    width: 100%;
+    color: #131335;
+    margin-top: 1em;
+}
+
+
+
+#actionsContainer {
+    padding-right: 2em;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#actionsContainer .ActionsNav {
+
+    font-size: large;
+    margin-top: 1em;
+    width: 24%;
+    border: 1px solid navy;
+    border-radius: 5px;
+    background-color: navy;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    color: whitesmoke;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+
+#actionsContainer .ActionsNav:hover {
+    background-color: rgb(11, 11, 182);
+    cursor: pointer;
+}
+
+
+#actionBox {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    min-height: 35em;
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 2em;
+    /* align-items: center; */
+}
+
+#actionBox #divCredit {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    width: 94%;
+    column-gap: 0;
+    gap: 1em;
+}
+
+#actionBox .description {
+    width: fit-content;
+    color: #81a6e2;
+    font-size: small;
+}
+
+#actionBox input[type="text"] {
+    padding: 0.5em;
+    width: fit-content;
+}
+
+#actionBox #submitBtn {
+    text-align: start;
+}
+
+#actionBox #submitBtn #signUpBtn {
+    width: 12em;
+}
+
+
+
+
+#actionBox #uploadBtn {
+    margin-top: 1em;
+    width: 8em;
+    background-color: #131335;
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+#actionBox #uploadBtn:hover {
+    cursor: pointer;
+    background-color: #414179;
+}
+
+input[type="file"] {
+    /* cursor: pointer; */
+    width: fit-content;
+    display: inline-block;
+    background-color: #18181b;
+    color: whitesmoke;
+    font-size: large;
+
+}
+
+
+#actionBox select {
+    width: fit-content;
+    padding: 0.5em;
+    background-color: white;
+    color: #131335;
+    font-size: large;
+}

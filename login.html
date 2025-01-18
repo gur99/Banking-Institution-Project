@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <!-- JS import -->
+    <script src="app.js" defer></script>
+    <title>Account login -Cha Ching Bank</title>
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav>
+        <div class="formImg">
+            <a href="index.html"><img src="IMG/logo_transparent.png" alt="Ops, something went wrong"> </a>
+        </div>
+
+    </nav>
+
+    <div class="wrapper">
+        <div class="loginBox">
+            <h2>Login to your account</h2>
+            <form id="loginForm">
+                <div>
+                    <input type="text" class="loginField" placeholder="username" required>
+                    <div id="loginUserError" style="display: none;">User not found</div>
+                </div>
+                <div>
+                    <input type="password" class="loginField" placeholder="password" required>
+                    <div id="loginPasswordError" style="display: none;">Password is incorrect</div>
+                </div>
+
+                <input type="button" id="loginButton" value="Log in" onclick="loginToAccount()">
+                <div>
+                    <p>Don't have an acount? <span id="registerLink"><a href="signUp.html">Register here</a></span></p>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style import -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <!-- JS import -->
+    <script src="app.js" defer></script>
+    <title>SignUp Page - ChaChing Bank</title>
+</head>
+
+<body>
+    <nav>
+        <div class="formImg">
+            <a href="index.html"><img src="IMG/logo_transparent.png" alt="Ops, something went wrong"> </a>
+        </div>
+    </nav>
+
+    <!-- Sign UP Form -->
+    <form id="signUpForm">
+        <!-- header -->
+        <header>
+            <h1>Create a new digital bank account</h1>
+            <h3>It's quick and easy!</h3>
+        </header>
+
+        <main>
+
+            <!-- Inputing Full name -->
+            <div class="description">Full name</div>
+            <div id="fullName">
+                <div> <input type="text" id="firstName" placeholder="First name" title="First name" required></div>
+                <div> <input type="text" id="lastName" placeholder="Last name" title="Last name" required></div>
+            </div>
+            <div class="description">Email</div>
+            <!-- input Email -->
+            <div id="divEmail">
+                <input type="email" id="email" placeholder="Email" required>
+                <div id="emailError" style="display: none;">Invalid email format Or Email is already taken.</div>
+            </div>
+
+            <div class="description">Date of birth</div>
+            <div id="dateAndGender">
+                <!-- input Date of Birth -->
+                <div id="date">
+                    <input type="date" id="dob" required>
+                    <div id="dobError" style="display: none;">You must be at least 16 years old.</div>
+                </div>
+                <div class="description">Gender</div>
+                <div id="gender">
+                    <label>
+                        Male
+                        <input type="radio" id="sexM" name="sex" value="Male" checked>
+                    </label>
+
+                    <label>
+                        Female
+                        <input type="radio" id="sexFM" name="sex" value="Female">
+                    </label>
+                </div>
+            </div>
+
+            <div class="description">Username</div>
+            <div id="divUsername">
+                <input type="text" id="username" placeholder="username" title="username" required>
+                <div id="usernameError" style="display: none;">Username is already taken.</div>
+            </div>
+
+            <div class="description">Password</div>
+            <div id="divPassword">
+                <input type="password" id="password" placeholder="password" title="password" required>
+                <div id="passwordError" style="display: none;">Password must be at least 8 characters, include one
+                    uppercase letter, one number, one special character, and one lowercase letter.</div>
+            </div>
+
+            <div id="divCredit">
+                <div class="description"><i class="fa fa-credit-card"></i> Credit card</div>
+                <div class="description">Expiration (mm/yy)</div>
+                <input type="text" id="ccNumber" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19" required>
+                <input type="text" id="ccExpiration" maxlength="5" placeholder="MM/YY" required>
+                <div id="ccNumberError" style="display: none;">Credit card number must be in the<br>
+                    format
+                    XXXX-XXXX-XXXX-XXXX.</div>
+                <div id="ccExpirationError" style="display: none;">Credit card expiration must be a valid future date in
+                    mm/yy format.</div>
+            </div>
+
+            <div class="description">Monthly Billing Day</div>
+            <input type="text" value="1st of each month" disabled>
+
+
+            <!-- SUBMIT BUTTON -->
+            <div id="submitBtn">
+                <input type="button" id="signUpBtn" onclick="addUser()" value="Sign Up">
+            </div>
+
+        </main>
+
+
+    </form>
+</body>
+
+</html>

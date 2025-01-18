@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions ChaChing</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- JS import -->
+    <!-- <script src="app.js" defer></script> -->
+    <script src="mainDash.js" defer></script>
+    <script src="transactions.js" defer></script>
+
+    <!-- JS graphs import -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.2/chart.umd.js">
+    </script>
+</head>
+
+<body onload="displayLastLogin()">
+    <nav id="transactionsNav">
+        <div id="dashboardNav">
+
+
+            <div id="helloMessageContainer">
+                <h2 id="helloMessage"></h2>
+                <h3 id="dateDisplay"></h3>
+            </div>
+        </div>
+
+
+        <div id="center">
+            <h2><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp;Log out</a></h2>
+        </div>
+
+        <a href="dashboard.html">
+            <img src="IMG/logo_transparent.png" alt="ops, something went wrong">
+        </a>
+    </nav>
+
+
+
+
+    <div class="MainContainerTransactions">
+
+
+        <aside class="sideNav">
+            <a href="dashboard.html">
+                <div>
+                    <h3>Home</h3>
+                </div>
+            </a>
+            <!-- <div>
+                <h3>Transactions</h3>
+            </div>
+            <div>
+                <h3>Breaking Deals</h3>
+            </div> -->
+            <a href="additional_actions.html">
+                <div>
+                    <h3>Additional actions</h3>
+
+                </div>
+            </a>
+        </aside>
+
+
+        <main>
+            <div class="mainHeader">
+
+                <div id="ExpenseTracker">
+                    <h2>Expense tracker:</h2>
+                    <div id="FutureBilling"></div>
+                    <div id="billingMethod"></div>
+                    <div>
+                        <h2 id="SelectedMonth"></h2>
+                    </div>
+                </div>
+
+                <!-- <aside class="transAside"> -->
+                <div id="ExpensesByMonth">
+
+                    <h2>Expenses by month</h2>
+
+                    <div>
+                        <select id="monthSelect">
+                        </select>
+
+                        <h4 id="totalDisplay"></h4>
+                    </div>
+
+                    <!-- <input type="file" accept=".csv" id="csvFileInput">
+                    <p id="output"></p> -->
+                </div>
+
+                <!-- </aside> -->
+
+            </div>
+
+            <div class="barChart">
+                <canvas id="barChartID"></canvas>
+            </div>
+
+            <div class="pieChart">
+                <canvas id="PieChartID"></canvas>
+            </div>
+
+            <div id="tblHeaderDiv">
+                <h2 id="tableHeaderMonthSelected"></h2>
+            </div>
+            <div id="table">
+                <div id="ListOfMonthExpenses"> </div>
+            </div>
+
+
+        </main>
+
+
+
+    </div>
+</body>
+
+</html>
