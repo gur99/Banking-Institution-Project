@@ -1,4 +1,4 @@
-debugger
+let cardCounter = 0;
 currentUser = JSON.parse(localStorage.getItem("currentUser"));
 CardsTransactions = [];
 let CurrnetUSerCards = [];
@@ -6,45 +6,27 @@ for (item of currentUser.creditCards) {
     CurrnetUSerCards.push(item);
     CardsTransactions.push(item.creditTransactions);
 }
+function getAllTransactions() {
+    debugger
+    let allConcatenatedTransactions = currentUser.creditCards[0].creditTransactions;
+    for (item of currentUser.creditCards) {
 
-// transactions = [
-//     {
-//         "Date": "01/12/2024",
-//         "Business Name": "Starbucks",
-//         "Category": "Food & Beverage",
-//         "Amount": "5.75"
-//     },
-//     {
-//         "Date": "01/01/2024",
-//         "Business Name": "Walmart",
-//         "Category": "Retail & Shopping",
-//         "Amount": "45.2"
-//     },
-//     {
-//         "Date": "02/01/2025",
-//         "Business Name": "Amazon",
-//         "Category": "Retail & Shopping",
-//         "Amount": "52.99"
-//     },
-//     {
-//         "Date": "01/01/2025",
-//         "Business Name": "Walmart",
-//         "Category": "Retail & Shopping",
-//         "Amount": "45.2"
-//     },
-//     {
-//         "Date": "02/12/2024",
-//         "Business Name": "Amazon",
-//         "Category": "Retail & Shopping",
-//         "Amount": "52.99"
-//     }
-// ]
+        if (item != currentUser.creditCards[0]) {
+            allConcatenatedTransactions = allConcatenatedTransactions.concat(item.creditTransactions);
+        }
+    }
+    let alltransactions = sortTransactions(allConcatenatedTransactions);
+    return alltransactions;
+}
+transactions = getAllTransactions();
+
+
 
 
 // fill Virtual credit card
 {
     for (item of currentUser.creditCards) {
-        debugger
+        // debugger
 
         // Call the function to create the template
         createCreditCardTemplate(item);
@@ -56,7 +38,7 @@ for (item of currentUser.creditCards) {
 
 // Calculate Former and Future Expneses
 {
-    debugger
+    // debugger
 
     // Get the current date
     const currentDate = new Date();
@@ -74,16 +56,7 @@ for (item of currentUser.creditCards) {
         lastMonthYear = currentYear;
     }
 
-    // Calculate the next month and its year
-    // let nextMonth, nextMonthYear;
-    // if (currentMonth === 12) {
-    //     nextMonth = 1;
-    //     nextMonthYear = currentYear + 1;
-    // } else {
-    //     nextMonth = currentMonth + 1;
-    //     nextMonthYear = currentYear;
-    // }
-
+    debugger
     if (transactions.length === 0) {
         document.getElementById("LastMonthCharge").append("No Transactions have been loaded yet.");
     }
@@ -97,7 +70,7 @@ for (item of currentUser.creditCards) {
         document.getElementById("LastMonthCharge").append(`Last Month payment for: ${lastMonth}/${lastMonthYear} | Charges were Total: ${lastMonthTotal} $`);
         let futureBilling = `Future payment for: ${currentMonth}/${currentYear}` + ' | ' + `Expected charge: ${nextMonthTotal} $`;
         document.getElementById("FutureBilling").append(futureBilling);
-        document.getElementById("billingMethod").append('Billing method: ' + currentUser.billingDay);
+        document.getElementById("billingMethod").append('Billing method: ' + currentUser.creditCards[0].billingDay);
 
         // Saving for local storage the next month billing message
         localStorage.setItem("futureBilling", JSON.stringify(futureBilling));
@@ -112,7 +85,7 @@ for (item of currentUser.creditCards) {
     }
     else {
 
-        debugger
+        // debugger
         let transactionContainer = document.querySelector('.transactionContainer');
         for (let index = transactions.length - 1; index >= transactions.length - 5; index--) {
             // Create a transaction div
@@ -129,6 +102,8 @@ for (item of currentUser.creditCards) {
             transactionDesc.append('Amount: ' + transactions[index].Amount + ' $');
             transactionDesc.appendChild(document.createElement("br"));
             transactionDesc.append('Business Name: ' + transactions[index]["Business Name"]);
+            transactionDesc.appendChild(document.createElement("br"));
+            transactionDesc.append('Date: ' + transactions[index]["Date"]);
             transactionDiv.appendChild(transactionDesc);
 
             // Append the transaction div to the container
@@ -147,6 +122,7 @@ for (item of currentUser.creditCards) {
 
 // Function to create the template dynamically
 function createCreditCardTemplate(item) {
+
     // Create the main wrapper
     const creditWrapper = document.createElement("div");
     creditWrapper.className = "creditWrapper";
@@ -154,11 +130,11 @@ function createCreditCardTemplate(item) {
 
     // Create the link element
     const link = document.createElement("a");
-    link.href = "transactions.html";
-
+    link.href = `transactions.html?indexOfCard=${cardCounter}`;
+    /* <a href="page2.html?name=John&age=25">Go to Page 2</a> */
     // Create the credit card container
     const creditCard = document.createElement("div");
-    creditCard.className = "credit-card";
+    creditCard.className = `credit-card card-${cardCounter}`;
 
     // Create the first circle
     const circle1 = document.createElement("div");
@@ -225,10 +201,6 @@ function createCreditCardTemplate(item) {
     // Append the creditWrapper to the body or a specific container
     document.querySelector('.mainDashboard').appendChild(creditWrapper);
 
-
-    debugger
-
-
     // Populate the details for the current credit card
     const numberDivs = number.querySelectorAll("div");
     const currentCardNumber = item.creditCardnumber;
@@ -243,4 +215,5 @@ function createCreditCardTemplate(item) {
 
     // Populate card owner's name
     cardOwner.textContent = `${currentUser.firstName} ${currentUser.lastName}`;
+    cardCounter++;
 }

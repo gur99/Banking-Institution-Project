@@ -23,7 +23,7 @@ let selectedCard;
 // Load transactions file
 {
     LoadFilesBtn.addEventListener("click", function () {
-        debugger
+        // debugger
         // Clear the mainBox content
         mainBox.innerHTML = "";
 
@@ -50,7 +50,7 @@ let selectedCard;
         if (currentUser.creditCards.length > 1) {
             // Create a dropdown for selecting credit cards
             let selectCardHeader = document.createElement("h2");
-            selectCardHeader.textContent = "Select a Credit Card";
+            selectCardHeader.textContent = "Select a credit card to add transactions to.";
 
             let cardDropdown = document.createElement("select");
             cardDropdown.setAttribute("id", "cardDropdown");
@@ -99,7 +99,7 @@ let selectedCard;
         // Add event listener to the upload button
         let indexOfSelectedCard = 0;
         uploadBtn.addEventListener("click", function () {
-            debugger
+            // debugger
             if (document.getElementById("cardDropdown")) {
                 // Find selected card index
                 indexOfSelectedCard = document.getElementById("cardDropdown").value;
@@ -118,11 +118,7 @@ let selectedCard;
                     const transactions = parseCSV(csvContent);
 
                     // Display the parsed transactions
-                    output.textContent = JSON.stringify(transactions, null, 2);
-
-
-
-
+                    // output.textContent = JSON.stringify(transactions, null, 2);
 
                     // Update local storage with the transactions
                     let users = localStorage.getItem("users"); // Get the data as a string
@@ -134,7 +130,7 @@ let selectedCard;
 
                     for (item in userList) {
                         if (currentUser.username === userList[item].username) {
-                            debugger
+                            // debugger
                             if (selectedCard.creditTransactions.length == 0) {
                                 // Assign transactions to appropriate card of current user
                                 currentUser.creditCards[indexOfSelectedCard].creditTransactions = transactions;
@@ -143,7 +139,7 @@ let selectedCard;
                                 break;
                             }
                             else {
-                                debugger
+                                // debugger
                                 let concatenated = userList[item].creditCards[indexOfSelectedCard].creditTransactions.concat(transactions);//Concatenate the old transactions with the new
                                 // FUNCTION TO REORDER  concatenate  NEW TRANSACTIONS 
                                 let concatOrderedTransactions = sortTransactions(concatenated);
@@ -155,6 +151,7 @@ let selectedCard;
                             }
                         }
                     }
+                    actionBox.textContent = "The file was uploaded successfully.";
                     localStorage.setItem("currentUser", JSON.stringify(currentUser));
                     localStorage.setItem("users", JSON.stringify(userList));
                 };
@@ -196,7 +193,7 @@ let selectedCard;
 
 
             // Get the indexOfSelected Card
-            if (document.getElementById("cardDropdown").value) {
+            if (document.getElementById("cardDropdown")) {
                 indexOfSelectedCard = document.getElementById("cardDropdown").value;
             }
             else {
@@ -214,10 +211,10 @@ let selectedCard;
                     const transactions = parseCSV(csvContent);
 
                     // Display the parsed transactions
-                    output.textContent = JSON.stringify(transactions, null, 2);
+                    // output.textContent = JSON.stringify(transactions, null, 2);
 
                     // Show success indicator
-                    alert("File uploaded successfully!");
+                    // alert("File uploaded successfully!");
 
                     // Disable further uploads
                     actionBox.textContent = "File uploaded successfully!"
@@ -225,7 +222,7 @@ let selectedCard;
 
                 reader.readAsText(file); // Read the file as text
             } else {
-                alert("Please select a file to upload.");
+                // alert("Please select a file to upload.");
             }
         });
     });
@@ -235,35 +232,6 @@ let selectedCard;
 
 }
 
-
-// SORT Concatenated Transactions
-function sortTransactions(transactions) {
-    // Helper function to convert a "DD/MM/YYYY" string to a Date object
-    function parseDate(dateString) {
-        let parts = dateString.split('/');
-        return new Date(parts[2], parts[1] - 1, parts[0]); // YYYY, MM-1, DD
-    }
-
-    // Custom sorting function
-    function compareTransactions(transaction1, transaction2) {
-        var date1 = parseDate(transaction1.Date);
-        var date2 = parseDate(transaction2.Date);
-
-        if (date1 < date2) {
-            return -1; // transaction1 comes before transaction2
-        }
-        if (date1 > date2) {
-            return 1; // transaction1 comes after transaction2
-        }
-        return 0; // Both dates are equal
-    }
-
-    // Sort the transactions using the custom comparison function
-    transactions.sort(compareTransactions);
-
-    // Return the sorted array
-    return transactions;
-}
 
 
 // // AddCreditCard
@@ -332,8 +300,7 @@ AddNewCard.addEventListener("click", function () {
     const ccExpirationError = document.createElement("div");
     ccExpirationError.id = "ccExpirationError";
     ccExpirationError.style.display = "none";
-    ccExpirationError.textContent =
-        "Credit card expiration must be a valid future date in mm/yy format.";
+    ccExpirationError.innerHTML = "Credit card expiration must be<br>a valid future date in mm/yy format.";
     ccExpBlock.appendChild(ccExpirationError);
 
     // Append ccExpBlock to divCredit
@@ -371,7 +338,7 @@ AddNewCard.addEventListener("click", function () {
     addCardBtn.type = "button";
     addCardBtn.id = "signUpBtn";
     addCardBtn.value = "Add Card";
-    debugger
+    // debugger
     addCardBtn.onclick = function () {
         // Add Card function--------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -395,8 +362,8 @@ AddNewCard.addEventListener("click", function () {
 
         // Split the expiration date into month and year
         let splitExpiration = ccExpiration.split('/');
-        let expMonth = parseInt(splitExpiration[0], 10);  // Convert month to a number
-        let expYear = parseInt(splitExpiration[1], 10);  // Convert year to a number
+        let expMonth = parseInt(splitExpiration[0]);  // Convert month to a number
+        let expYear = parseInt(splitExpiration[1]);  // Convert year to a number
 
         const now = new Date();
         const expirationDate = new Date(`20${expYear}`, expMonth - 1); // Create a date object with the expiration date
@@ -415,7 +382,7 @@ AddNewCard.addEventListener("click", function () {
         }
 
 
-        debugger
+        // debugger
         if (valid) {
 
             // create an array of creditCards of the current user 
@@ -442,7 +409,7 @@ AddNewCard.addEventListener("click", function () {
 
             for (item in userList) {
                 if (currentUser.username === userList[item].username) {
-                    debugger
+                    // debugger
                     // Assign new card to appropriate user INSIDE users List
                     userList[item].creditCards.push(newCreditCard);
                     break;
@@ -467,7 +434,7 @@ AddNewCard.addEventListener("click", function () {
 
     // Add Listener for dash inside XXXX-XXXX...
     {
-        debugger
+        // debugger
         // Get the input field
         let ccInput = document.getElementById('ccNumber');
 

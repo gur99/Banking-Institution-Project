@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="responsiveness.css">
     <script src="app.js" defer></script>
     <script src="mainDash.js" defer></script>
     <script src="additionActions.js" defer></script>
@@ -19,7 +20,9 @@
 
     <nav id="transactionsNav">
         <div id="dashboardNav">
-
+            <a href="dashboard.html">
+                <img src="IMG/logo_transparent.png" alt="ops, something went wrong">
+            </a>
 
             <div id="helloMessageContainer">
                 <h2 id="helloMessage"></h2>
@@ -32,16 +35,13 @@
             <h2><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp;Log out</a></h2>
         </div>
 
-        <a href="dashboard.html">
-            <img src="IMG/logo_transparent.png" alt="ops, something went wrong">
-        </a>
+
     </nav>
 
 
 
 
     <div class="MainContainer">
-
 
         <aside class="sideNav">
             <a href="dashboard.html">
@@ -70,7 +70,7 @@
                 <div id="actionsContainer">
                     <input type="button" class="ActionsNav" id="LoadFiles" value="Load transactions file">
                     <input type="button" class="ActionsNav" id="AddCreditCard" value="Add new credit card">
-                    <input type="button" class="ActionsNav" id="changeDayOfCharge" value="Change day of charge">
+                    <!-- <input type="button" class="ActionsNav" id="changeDayOfCharge" value="Change day of charge"> -->
                     <!-- <input type="button" class="ActionsNav" value="Another action?"> -->
                 </div>
 

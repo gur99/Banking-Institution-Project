@@ -73,3 +73,31 @@ function calculateTotalTransactionsForMonth(transactions, year, month) {
 
 
 
+// SORT Concatenated Transactions
+function sortTransactions(transactions) {
+    // Helper function to convert a "DD/MM/YYYY" string to a Date object
+    function parseDate(dateString) {
+        let parts = dateString.split('/');
+        return new Date(parts[2], parts[1] - 1, parts[0]); // YYYY, MM-1, DD
+    }
+
+    //  sorting function
+    function compareTransactions(transaction1, transaction2) {
+        var date1 = parseDate(transaction1.Date);
+        var date2 = parseDate(transaction2.Date);
+
+        if (date1 < date2) {
+            return -1; // transaction1 comes before transaction2
+        }
+        if (date1 > date2) {
+            return 1; // transaction1 comes after transaction2
+        }
+        return 0; // Both dates are equal
+    }
+
+    // Sort the transactions using the comparison function
+    transactions.sort(compareTransactions);
+
+    // Return the sorted array
+    return transactions;
+}

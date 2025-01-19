@@ -1,5 +1,6 @@
 let creditCards = [];
 
+
 function creditCard(creditCardnumber, expirationDate) {
     this.creditCardnumber = creditCardnumber;
     this.expirationDate = expirationDate;
@@ -40,23 +41,23 @@ function user(firstName, lastName, email, dateOfBirth, gender, username, passwor
 if (!localStorage.getItem("users")) {
     // localStorage.setItem("users", JSON.stringify([]));
 
-    const Card1 = new creditCard("4111-1111-1111-1111", "25/12");
-    const Card2 = new creditCard("4222-2222-2222-2222", "26/11");
-    const Card3 = new creditCard("4444-4444-4444-4444", "28/09");
-    const Card4 = new creditCard("4555-5555-5555-5555", "29/08");
-    const Card5 = new creditCard("4425-5225-5885-9555", "31/08");
+    // const Card1 = new creditCard("4111-1111-1111-1111", "25/12");
+    // const Card2 = new creditCard("4222-2222-2222-2222", "26/11");
+    // const Card3 = new creditCard("4444-4444-4444-4444", "28/09");
+    // const Card4 = new creditCard("4555-5555-5555-5555", "29/08");
+    // const Card5 = new creditCard("4425-5225-5885-9555", "31/08");
 
 
+    // let users = [];
+    // const user1 = new user("Alice", "Smith", "alice.smith@example.com", "1995-06-15", "Female", "alice123", "password1", Card1);
+    // const user2 = new user("Bob", "Johnson", "bob.johnson@example.com", "1990-03-22", "Male", "bobthebuilder", "password2", Card2);
+    // const user3 = new user("Charlie", "Brown", "charlie.brown@example.com", "1988-09-05", "Male", "charlieB", "password3", Card3);
+    // const user4 = new user("Diana", "White", "diana.white@example.com", "1993-12-01", "Female", "dianaW", "password4", Card4);
+    // const user5 = new user("Ethan", "Green", "ethan.green@example.com", "1997-07-19", "Male", "ethanG", "password5", Card5);
+
+
+    // users.push(user1, user2, user3, user4, user5);
     let users = [];
-    const user1 = new user("Alice", "Smith", "alice.smith@example.com", "1995-06-15", "Female", "alice123", "password1", Card1);
-    const user2 = new user("Bob", "Johnson", "bob.johnson@example.com", "1990-03-22", "Male", "bobthebuilder", "password2", Card2);
-    const user3 = new user("Charlie", "Brown", "charlie.brown@example.com", "1988-09-05", "Male", "charlieB", "password3", Card3);
-    const user4 = new user("Diana", "White", "diana.white@example.com", "1993-12-01", "Female", "dianaW", "password4", Card4);
-    const user5 = new user("Ethan", "Green", "ethan.green@example.com", "1997-07-19", "Male", "ethanG", "password5", Card5);
-
-
-    users.push(user1, user2, user3, user4, user5);
-
     console.log(users);
     // Enter manualy users
     localStorage.setItem("users", JSON.stringify(users));
@@ -85,14 +86,21 @@ function addUser() {
     document.getElementById('dobError').style.display = "none";
     document.getElementById('ccNumberError').style.display = "none";
     document.getElementById('ccExpirationError').style.display = "none";
+    document.getElementById('firstNameError').style.display = "none";
+    document.getElementById('usernameError').style.display = "none";
 
     valid = true;
 
-    //Getting User First Name and Last Name
+    //Getting User First Name
     const firstName = document.getElementById('firstName').value;
+
+    // Validate First Name
+    if (!firstName) {
+        document.getElementById('firstNameError').style.display = "block";
+        valid = false;
+    }
+    // Getting User Last Name
     const lastName = document.getElementById('lastName').value;
-    console.log(firstName);
-    console.log(lastName);
 
     // Gender input
     let genderInput = document.querySelector('input[name="sex"]:checked').value;
@@ -179,6 +187,10 @@ function addUser() {
     let isEmailTaken = false;
     let isUsernameTaken = false;
 
+    if (!usernameInput) {
+        document.getElementById('usernameError').style.display = "block";
+        valid = false;
+    }
     // Check if the email or username is already in use
     for (let i = 0; i < existingUsers.length; i++) {
         if (existingUsers[i].email === email) {

@@ -1,128 +1,136 @@
 Date,Business Name,Category,Amount
-01/01/2024,Starbucks,Food & Beverage,5.75
-04/01/2024,Amazon,Retail & Shopping,52.99
-07/01/2024,Whole Foods,Home & Personal Care,78.4
-10/01/2024,Shell,Travel & Transportation,40.0
-13/01/2024,Netflix,Entertainment & Subscriptions,15.99
-16/01/2024,Uber,Travel & Transportation,22.5
-19/01/2024,Apple Store,Electronics,120.99
-22/01/2024,Costco,Retail & Shopping,200.0
-25/01/2024,Spotify,Entertainment & Subscriptions,9.99
-28/01/2024,Walmart,Retail & Shopping,80.45
-31/01/2024,Starbucks,Food & Beverage,5.75
-03/02/2024,Amazon,Retail & Shopping,52.99
-06/02/2024,Whole Foods,Home & Personal Care,78.4
-09/02/2024,Shell,Travel & Transportation,40.0
-12/02/2024,Netflix,Entertainment & Subscriptions,15.99
-15/02/2024,Uber,Travel & Transportation,22.5
-18/02/2024,Apple Store,Electronics,120.99
-21/02/2024,Costco,Retail & Shopping,200.0
-24/02/2024,Spotify,Entertainment & Subscriptions,9.99
-27/02/2024,Walmart,Retail & Shopping,80.45
-01/03/2024,Starbucks,Food & Beverage,5.75
-04/03/2024,Amazon,Retail & Shopping,52.99
-07/03/2024,Whole Foods,Home & Personal Care,78.4
-10/03/2024,Shell,Travel & Transportation,40.0
-13/03/2024,Netflix,Entertainment & Subscriptions,15.99
-16/03/2024,Uber,Travel & Transportation,22.5
-19/03/2024,Apple Store,Electronics,120.99
-22/03/2024,Costco,Retail & Shopping,200.0
-25/03/2024,Spotify,Entertainment & Subscriptions,9.99
-28/03/2024,Walmart,Retail & Shopping,80.45
-31/03/2024,Starbucks,Food & Beverage,5.75
-03/04/2024,Amazon,Retail & Shopping,52.99
-06/04/2024,Whole Foods,Home & Personal Care,78.4
-09/04/2024,Shell,Travel & Transportation,40.0
-12/04/2024,Netflix,Entertainment & Subscriptions,15.99
-15/04/2024,Uber,Travel & Transportation,22.5
-18/04/2024,Apple Store,Electronics,120.99
-21/04/2024,Costco,Retail & Shopping,200.0
-24/04/2024,Spotify,Entertainment & Subscriptions,9.99
-27/04/2024,Walmart,Retail & Shopping,80.45
-30/04/2024,Starbucks,Food & Beverage,5.75
-03/05/2024,Amazon,Retail & Shopping,52.99
-06/05/2024,Whole Foods,Home & Personal Care,78.4
-09/05/2024,Shell,Travel & Transportation,40.0
-12/05/2024,Netflix,Entertainment & Subscriptions,15.99
-15/05/2024,Uber,Travel & Transportation,22.5
-18/05/2024,Apple Store,Electronics,120.99
-21/05/2024,Costco,Retail & Shopping,200.0
-24/05/2024,Spotify,Entertainment & Subscriptions,9.99
-27/05/2024,Walmart,Retail & Shopping,80.45
-30/05/2024,Starbucks,Food & Beverage,5.75
-02/06/2024,Amazon,Retail & Shopping,52.99
-05/06/2024,Whole Foods,Home & Personal Care,78.4
-08/06/2024,Shell,Travel & Transportation,40.0
-11/06/2024,Netflix,Entertainment & Subscriptions,15.99
-14/06/2024,Uber,Travel & Transportation,22.5
-17/06/2024,Apple Store,Electronics,120.99
-20/06/2024,Costco,Retail & Shopping,200.0
-23/06/2024,Spotify,Entertainment & Subscriptions,9.99
-26/06/2024,Walmart,Retail & Shopping,80.45
-29/06/2024,Starbucks,Food & Beverage,5.75
-02/07/2024,Amazon,Retail & Shopping,52.99
-05/07/2024,Whole Foods,Home & Personal Care,78.4
-08/07/2024,Shell,Travel & Transportation,40.0
-11/07/2024,Netflix,Entertainment & Subscriptions,15.99
-14/07/2024,Uber,Travel & Transportation,22.5
-17/07/2024,Apple Store,Electronics,120.99
-20/07/2024,Costco,Retail & Shopping,200.0
-23/07/2024,Spotify,Entertainment & Subscriptions,9.99
-26/07/2024,Walmart,Retail & Shopping,80.45
-29/07/2024,Starbucks,Food & Beverage,5.75
-01/08/2024,Amazon,Retail & Shopping,52.99
-04/08/2024,Whole Foods,Home & Personal Care,78.4
-07/08/2024,Shell,Travel & Transportation,40.0
-10/08/2024,Netflix,Entertainment & Subscriptions,15.99
-13/08/2024,Uber,Travel & Transportation,22.5
-16/08/2024,Apple Store,Electronics,120.99
-19/08/2024,Costco,Retail & Shopping,200.0
-22/08/2024,Spotify,Entertainment & Subscriptions,9.99
-25/08/2024,Walmart,Retail & Shopping,80.45
-28/08/2024,Starbucks,Food & Beverage,5.75
-31/08/2024,Amazon,Retail & Shopping,52.99
-03/09/2024,Whole Foods,Home & Personal Care,78.4
-06/09/2024,Shell,Travel & Transportation,40.0
-09/09/2024,Netflix,Entertainment & Subscriptions,15.99
-12/09/2024,Uber,Travel & Transportation,22.5
-15/09/2024,Apple Store,Electronics,120.99
-18/09/2024,Costco,Retail & Shopping,200.0
-21/09/2024,Spotify,Entertainment & Subscriptions,9.99
-24/09/2024,Walmart,Retail & Shopping,80.45
-27/09/2024,Starbucks,Food & Beverage,5.75
-30/09/2024,Amazon,Retail & Shopping,52.99
-03/10/2024,Whole Foods,Home & Personal Care,78.4
-06/10/2024,Shell,Travel & Transportation,40.0
-09/10/2024,Netflix,Entertainment & Subscriptions,15.99
-12/10/2024,Uber,Travel & Transportation,22.5
-15/10/2024,Apple Store,Electronics,120.99
-18/10/2024,Costco,Retail & Shopping,200.0
-21/10/2024,Spotify,Entertainment & Subscriptions,9.99
-24/10/2024,Walmart,Retail & Shopping,80.45
-27/10/2024,Starbucks,Food & Beverage,5.75
-30/10/2024,Amazon,Retail & Shopping,52.99
-02/11/2024,Whole Foods,Home & Personal Care,78.4
-05/11/2024,Shell,Travel & Transportation,40.0
-08/11/2024,Netflix,Entertainment & Subscriptions,15.99
-11/11/2024,Uber,Travel & Transportation,22.5
-14/11/2024,Apple Store,Electronics,120.99
-17/11/2024,Costco,Retail & Shopping,200.0
-20/11/2024,Spotify,Entertainment & Subscriptions,9.99
-23/11/2024,Walmart,Retail & Shopping,80.45
-26/11/2024,Starbucks,Food & Beverage,5.75
-29/11/2024,Amazon,Retail & Shopping,52.99
-02/12/2024,Whole Foods,Home & Personal Care,78.4
-05/12/2024,Shell,Travel & Transportation,40.0
-08/12/2024,Netflix,Entertainment & Subscriptions,15.99
-11/12/2024,Uber,Travel & Transportation,22.5
-14/12/2024,Apple Store,Electronics,120.99
-17/12/2024,Costco,Retail & Shopping,200.0
-20/12/2024,Spotify,Entertainment & Subscriptions,9.99
-23/12/2024,Walmart,Retail & Shopping,80.45
-26/12/2024,Starbucks,Food & Beverage,5.75
-29/12/2024,Amazon,Retail & Shopping,52.99
-01/01/2025,Whole Foods,Home & Personal Care,78.4
-04/01/2025,Shell,Travel & Transportation,40.0
-07/01/2025,Netflix,Entertainment & Subscriptions,15.99
-10/01/2025,Uber,Travel & Transportation,22.5
-13/01/2025,Apple Store,Electronics,120.99
+01/01/2024,Apple Store,Electronics,921.17
+01/01/2024,Delta Airlines,Travel,75.73
+01/01/2024,Planet Fitness,Health,23.4
+01/01/2024,H&M,Clothing,215.17
+01/01/2024,Starbucks,Dining,77.29
+01/01/2024,Whole Foods,Groceries,20.8
+01/01/2024,Airbnb,Travel,194.95
+01/01/2024,Uniqlo,Clothing,161.12
+27/01/2024,Planet Fitness,Health,82.93
+27/01/2024,Trader Joe's,Groceries,165.72
+27/01/2024,Airbnb,Travel,355.44
+27/01/2024,McDonald's,Dining,27.95
+27/01/2024,Zara,Clothing,62.37
+27/01/2024,Starbucks,Dining,89.04
+27/01/2024,Walgreens,Health,107.92
+27/01/2024,CVS,Health,28.93
+27/01/2024,Planet Fitness,Health,26.64
+22/02/2024,CVS,Health,162.94
+22/02/2024,Uniqlo,Clothing,123.15
+22/02/2024,Trader Joe's,Groceries,56.96
+22/02/2024,Uniqlo,Clothing,268.29
+22/02/2024,Trader Joe's,Groceries,130.02
+22/02/2024,Uniqlo,Clothing,30.73
+22/02/2024,Walmart,Groceries,103.99
+22/02/2024,Whole Foods,Groceries,85.78
+22/02/2024,Planet Fitness,Health,55.08
+22/02/2024,Zara,Clothing,53.13
+22/02/2024,Trader Joe's,Groceries,199.35
+22/02/2024,Samsung,Electronics,1434.85
+22/02/2024,Delta Airlines,Travel,87.81
+22/02/2024,Planet Fitness,Health,63.29
+22/02/2024,McDonald's,Dining,89.7
+25/03/2024,Whole Foods,Groceries,117.76
+25/03/2024,Uniqlo,Clothing,94.29
+25/03/2024,Walgreens,Health,188.06
+25/03/2024,Airbnb,Travel,348.79
+25/03/2024,Walgreens,Health,31.07
+25/03/2024,Samsung,Electronics,193.45
+25/03/2024,Trader Joe's,Groceries,108.59
+25/03/2024,Uber,Travel,427.12
+29/04/2024,H&M,Clothing,120.95
+29/04/2024,Best Buy,Electronics,255.27
+29/04/2024,Apple Store,Electronics,104.55
+29/04/2024,CVS,Health,95.98
+29/04/2024,Uber,Travel,498.23
+29/04/2024,CVS,Health,50.94
+29/04/2024,Walgreens,Health,178.77
+29/04/2024,CVS,Health,58.18
+29/04/2024,CVS,Health,42.06
+29/04/2024,Airbnb,Travel,282.86
+29/04/2024,Uber,Travel,217.83
+29/04/2024,Uber,Travel,349.32
+26/05/2024,Samsung,Electronics,170.68
+26/05/2024,Uniqlo,Clothing,136.66
+26/05/2024,Trader Joe's,Groceries,90.59
+26/05/2024,CVS,Health,72.86
+26/05/2024,Airbnb,Travel,98.27
+26/05/2024,H&M,Clothing,246.95
+26/05/2024,CVS,Health,150.71
+26/05/2024,Trader Joe's,Groceries,62.3
+26/05/2024,Chipotle,Dining,70.69
+26/05/2024,CVS,Health,155.9
+26/05/2024,Airbnb,Travel,229.4
+26/05/2024,CVS,Health,143.21
+26/05/2024,Chipotle,Dining,52.16
+26/05/2024,Delta Airlines,Travel,123.37
+28/06/2024,Zara,Clothing,104.22
+28/06/2024,Delta Airlines,Travel,334.66
+28/06/2024,Zara,Clothing,180.24
+28/06/2024,Walmart,Groceries,114.11
+28/06/2024,Chipotle,Dining,72.01
+25/07/2024,Whole Foods,Groceries,20.7
+25/07/2024,Zara,Clothing,266.91
+25/07/2024,Walmart,Groceries,173.51
+25/07/2024,Walgreens,Health,46.14
+25/07/2024,Chipotle,Dining,28.64
+23/08/2024,Zara,Clothing,135.12
+23/08/2024,McDonald's,Dining,87.09
+23/08/2024,Apple Store,Electronics,461.97
+23/08/2024,Planet Fitness,Health,181.89
+23/08/2024,Walgreens,Health,124.98
+23/08/2024,McDonald's,Dining,22.31
+23/08/2024,Whole Foods,Groceries,188.84
+23/08/2024,Delta Airlines,Travel,437.25
+23/08/2024,Zara,Clothing,235.1
+23/08/2024,Starbucks,Dining,80.38
+23/08/2024,Apple Store,Electronics,1131.26
+23/08/2024,Whole Foods,Groceries,145.42
+17/09/2024,Planet Fitness,Health,168.53
+17/09/2024,Apple Store,Electronics,1092.25
+17/09/2024,Samsung,Electronics,700.77
+17/09/2024,Chipotle,Dining,71.58
+17/09/2024,Chipotle,Dining,35.83
+17/09/2024,Whole Foods,Groceries,71.38
+17/09/2024,H&M,Clothing,280.75
+17/09/2024,Trader Joe's,Groceries,35.54
+19/10/2024,CVS,Health,72.41
+19/10/2024,Chipotle,Dining,52.0
+19/10/2024,Apple Store,Electronics,1221.68
+19/10/2024,Apple Store,Electronics,577.07
+19/10/2024,Starbucks,Dining,86.79
+19/10/2024,Uber,Travel,448.64
+19/10/2024,Walmart,Groceries,67.44
+19/10/2024,Apple Store,Electronics,1089.3
+19/10/2024,H&M,Clothing,87.89
+19/10/2024,Uniqlo,Clothing,159.6
+19/10/2024,Delta Airlines,Travel,173.7
+19/10/2024,Starbucks,Dining,62.02
+19/10/2024,Uber,Travel,157.68
+19/10/2024,Walgreens,Health,162.13
+22/11/2024,Trader Joe's,Groceries,131.09
+22/11/2024,Chipotle,Dining,85.09
+22/11/2024,Samsung,Electronics,664.98
+22/11/2024,Chipotle,Dining,37.26
+22/11/2024,Delta Airlines,Travel,298.88
+22/11/2024,Chipotle,Dining,13.28
+22/11/2024,Trader Joe's,Groceries,145.29
+22/11/2024,Best Buy,Electronics,1175.32
+22/11/2024,Whole Foods,Groceries,196.81
+22/11/2024,Trader Joe's,Groceries,131.05
+22/11/2024,Walgreens,Health,15.8
+22/11/2024,Delta Airlines,Travel,60.51
+17/12/2024,Uniqlo,Clothing,111.06
+17/12/2024,Chipotle,Dining,51.34
+17/12/2024,H&M,Clothing,142.29
+17/12/2024,CVS,Health,146.53
+17/12/2024,H&M,Clothing,50.99
+17/12/2024,Uber,Travel,217.7
+17/12/2024,Zara,Clothing,133.72
+17/12/2024,Trader Joe's,Groceries,83.63
+17/12/2024,Best Buy,Electronics,1045.34
+17/12/2024,CVS,Health,74.28
+17/12/2024,Best Buy,Electronics,1164.35
+17/12/2024,Best Buy,Electronics,1278.87
+17/12/2024,Best Buy,Electronics,1431.05

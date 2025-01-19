@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link rel="stylesheet" href="responsiveness.css">
     <!-- JS import -->
     <script src="app.js" defer></script>
     <title>SignUp Page - ChaChing Bank</title>
@@ -34,6 +35,8 @@
             <div class="description">Full name</div>
             <div id="fullName">
                 <div> <input type="text" id="firstName" placeholder="First name" title="First name" required></div>
+                <div id="firstNameError" style="display:none;">First name is require.</div>
+
                 <div> <input type="text" id="lastName" placeholder="Last name" title="Last name" required></div>
             </div>
             <div class="description">Email</div>
@@ -67,7 +70,7 @@
             <div class="description">Username</div>
             <div id="divUsername">
                 <input type="text" id="username" placeholder="username" title="username" required>
-                <div id="usernameError" style="display: none;">Username is already taken.</div>
+                <div id="usernameError" style="display: none;">Username is already taken Or Empty.</div>
             </div>
 
             <div class="description">Password</div>
@@ -102,6 +105,7 @@
 
 
     </form>
+    <div class="botton"></div>
 </body>
 
 </html>

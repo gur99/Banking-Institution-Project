@@ -1,12 +1,21 @@
+// Get the query string
+let urlParams = new URLSearchParams(window.location.search);
+// Extract parameters
+let indexOfPressedCard = urlParams.get('indexOfCard');
+
+
+
 // Retrieve existing users from local storage
 // let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
 
 
-
 // Creating Month Selection
 {
-    if (currentUser.creditTransactions) {
+    if (!indexOfPressedCard)
+        indexOfPressedCard = 0;
+
+    if (currentUser.creditCards[indexOfPressedCard].creditTransactions) {
 
         let monthSelect = document.getElementById("monthSelect");
         let startDate = new Date(2024, 0); // January 2024
@@ -21,13 +30,13 @@
         monthOption.value = 'PreChoice';
         monthOption.textContent = 'Select a month';
         monthSelect.appendChild(monthOption);
-
+        // Itereate from Januar 2024 Until Today
         while (startDate <= endDate) {
             const year = startDate.getFullYear();
             const month = startDate.getMonth();
             const monthOption = document.createElement("option");
 
-            // Format the month to always be two digits without +, <, or ?
+            // Format the month to always be two digits:  add 0 or not
             let monthValue = String(month);
             if (monthValue.length === 1) {
                 monthValue = "0" + String(parseInt(monthValue) + 1);
@@ -57,8 +66,7 @@ let pieChart;
 let selection = document.getElementById("monthSelect");
 
 selection.addEventListener("change", function () {
-    debugger
-    if (currentUser.creditTransactions.length != 0) {
+    if (currentUser.creditCards[indexOfPressedCard].creditTransactions.length != 0) {
         if (selection.value == "PreChoice") //If NO Value selected
             return;
         let selectedValue = selection.value; // e.g., "2024-01"
@@ -66,14 +74,14 @@ selection.addEventListener("change", function () {
         let year = parseInt(splitValue[0], 10); // Convert year to a number
         let month = parseInt(splitValue[1], 10); // Convert month to a number
 
+
+        // debugger
         // Calculate the total transactions for the selected month and year
-        let total = calculateTotalTransactionsForMonth(currentUser.creditTransactions, year, month);
+        let total = calculateTotalTransactionsForMonth(currentUser.creditCards[indexOfPressedCard].creditTransactions, year, month);
         console.log(`Total for ${selectedValue}: $${total}`);
 
-        // Optionally display the total on the page
         document.getElementById("totalDisplay").textContent = `Total Transactions: $${total}`;
 
-        debugger
         let monthBefore, MonthYearBefore;
         if (month === 1) {
             monthBefore = 12;
@@ -91,17 +99,14 @@ selection.addEventListener("change", function () {
             twoMonthYearBefore = year;
         }
 
-
-        let totalMonthBefore = calculateTotalTransactionsForMonth(currentUser.creditTransactions, MonthYearBefore, monthBefore);
-        let totalTwoMonthBefore = calculateTotalTransactionsForMonth(currentUser.creditTransactions, twoMonthYearBefore, twoMonthBefore);
+        let totalMonthBefore = calculateTotalTransactionsForMonth(currentUser.creditCards[indexOfPressedCard].creditTransactions, MonthYearBefore, monthBefore);
+        let totalTwoMonthBefore = calculateTotalTransactionsForMonth(currentUser.creditCards[indexOfPressedCard].creditTransactions, twoMonthYearBefore, twoMonthBefore);
 
         createNewList(month, year);
-
         let selectedMonth = document.getElementById("SelectedMonth");
         selectedMonth.textContent = "Month Selected: " + numberToMonth(month);
         let tableHeader = document.getElementById("tableHeaderMonthSelected");
         tableHeader.textContent = "Expense breakdown for: " + numberToMonth(month) + "/" + year;
-
 
 
         // Pir Chart
@@ -126,7 +131,7 @@ selection.addEventListener("change", function () {
         }
 
         // Get totals by category
-        const categoryTotals = calculateCategoryTotals(currentUser.creditTransactions);
+        const categoryTotals = calculateCategoryTotals(currentUser.creditCards[indexOfPressedCard].creditTransactions);
 
         // Prepare data for the chart
         const categories = Object.keys(categoryTotals); // Labels
@@ -153,7 +158,7 @@ selection.addEventListener("change", function () {
                 }]
             },
             options: {
-                responsive: true, // Ensure responsiveness
+                responsive: true,
                 maintainAspectRatio: false, // Allow resizing without keeping the aspect ratio
                 plugins: {
                     legend: {
@@ -171,10 +176,6 @@ selection.addEventListener("change", function () {
             }
         });
 
-
-
-
-
         // Bar Chart 
         {
 
@@ -184,7 +185,7 @@ selection.addEventListener("change", function () {
             barChart = new Chart($("#barChartID"), {
                 type: 'bar',
                 options: {
-                    responsive: true, // Ensure responsiveness
+                    responsive: true,
                     maintainAspectRatio: false, // Allow resizing without keeping the aspect ratio
                     plugins: {
 
@@ -223,9 +224,17 @@ selection.addEventListener("change", function () {
 
 // UPDATING next month billing 
 {
-    let futureBilling = JSON.parse(localStorage.getItem("futureBilling"));
+    // debugger
+    let futureBilling;
+
+    if (currentUser.creditCards[indexOfPressedCard].creditTransactions.length === 0) {
+        futureBilling = "Expected Charge for Next Month: No transactions loaded yet for this card."
+    }
+    else {
+        futureBilling = JSON.parse(localStorage.getItem("futureBilling"));
+    }
     document.getElementById("FutureBilling").append(futureBilling);
-    document.getElementById("billingMethod").append('Billing method: ' + currentUser.billingDay);
+    document.getElementById("billingMethod").append('Billing method: ' + currentUser.creditCards[0].billingDay);
 }
 
 
@@ -267,7 +276,7 @@ function createNewList(month, year) {
 
 
 
-    debugger
+    // debugger
     for (item of relevantTransactions) {
         row = document.createElement("div");
         row.className = "row";
@@ -301,7 +310,7 @@ function createNewList(month, year) {
 // Get all transactions by month & year
 function getAllTransactionsBy(month, year) {
     transactionsByMonthNYear = [];
-    for (item of currentUser.creditTransactions) {
+    for (item of currentUser.creditCards[indexOfPressedCard].creditTransactions) {
         // Parse the transaction date
         let itemMonth = parseInt(item.Date.substring(3, 5));
         let itemYear = parseInt(item.Date.substring(6, 10));

@@ -6,6 +6,7 @@ body {
     background-size: cover;
     background-position: center;
     font-family: 'Lato';
+    background-color: #131335;
 }
 
 
@@ -27,7 +28,7 @@ nav {
 
 nav img {
     padding: 0;
-    margin-left: 5em;
+    /* margin-left: 5em; */
     width: 150px;
     height: 150px;
 
@@ -47,6 +48,7 @@ nav .formImg {
 .container1 {
     display: flex;
     flex-direction: column;
+    align-items: start;
     gap: 1em;
     margin-top: 4em;
     margin-bottom: 4em;
@@ -61,9 +63,21 @@ nav .formImg {
     background: rgb(214, 209, 209);
     border-top-left-radius: 10em;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     padding-bottom: 4em;
     padding-top: 4em;
+    gap: 1em;
+}
+
+.container2 div {
+    padding: 2em;
+    /* margin: 5em; */
+    border-radius: 10px;
+    background-color: whitesmoke;
+    min-height: 12em;
+    height: auto;
+    width: 25%;
 }
 
 .container2 div h1 {
@@ -75,26 +89,21 @@ nav .formImg {
 }
 
 
-.container2 div {
-    padding: 2em;
-    margin: 5em;
-    border-radius: 10px;
-    background-color: whitesmoke;
-    min-height: 12em;
-    height: fit-content;
-    width: 20%;
-}
-
 /* Container #3 */
 .container3 {
-    height: 600px;
-    background: url('IMG/happyLife1.jpg') no-repeat;
+    height: fit-content;
+    background-color: rgb(214, 209, 209);
+    ;
+
+}
+
+.container3 #happinessPhoto {
+    background: url('IMG/happyLife1.jpg') no-repeat center fixed;
+    height: 50vh;
+    width: 90%;
+    justify-self: center;
     background-size: cover;
     background-position: center;
-
-    /* background: white; */
-
-
 }
 
 /* Container #4 */
@@ -125,7 +134,8 @@ nav .formImg {
     margin-top: 2em;
     margin-bottom: 2em;
     padding-bottom: 1.2em;
-    width: 30%;
+    width: fit-content;
+    max-width: 40em;
     justify-self: center;
     background-color: whitesmoke;
     min-height: 40em;
@@ -142,6 +152,9 @@ nav .formImg {
     margin-bottom: 0.5em;
     border: 1px solid rgb(224, 224, 224);
 }
+
+
+
 
 #signUpForm header {
     text-align: center;
@@ -163,7 +176,8 @@ nav .formImg {
     padding-bottom: 0.5em;
 }
 
-/* SIGN UP-MAIN */
+
+/* SIGN UP-MAIN ------------------------------------------------------------------------------------------------------------*/
 #signUpForm main {
     width: 85%;
     justify-self: center;
@@ -179,7 +193,7 @@ nav .formImg {
 #fullName {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    column-gap: 2em;
     flex-wrap: wrap;
 }
 
@@ -193,7 +207,7 @@ nav .formImg {
 }
 
 input[type="email"] {
-    width: 96%;
+    width: 14em;
 }
 
 /* Date & Gender */
@@ -220,7 +234,7 @@ input[type="email"] {
     background-color: white;
     align-self: center;
     padding: 0.15em;
-    width: 40%;
+    width: 6em;
     min-width: 85px;
     color: rgb(143, 143, 143);
 }
@@ -289,7 +303,9 @@ input[type=button] {
     background-color: #669cf3;
 }
 
-
+#ccExpiration {
+    max-width: 6em;
+}
 
 #registerButton {
     font-family: 'Lato';
@@ -318,9 +334,10 @@ input[type=button] {
 #emailError,
 #usernameError,
 #loginPasswordError,
-#loginUserError {
+#loginUserError,
+#firstNameError {
     color: red;
-    font-size: smaller;
+    font-size: small;
     padding-bottom: 0.5em;
 }
 
@@ -345,6 +362,8 @@ input[type=button] {
     border: 1px solid red;
     width: 25em;
     background-color: rgb(233, 233, 233);
+    margin-top: 5em;
+    margin-bottom: 10em;
 
 }
 
@@ -396,6 +415,7 @@ input[type=button] {
     font-size: 3em;
     font-family: 'Lato';
     padding: 0.2em;
+    text-align: center;
 }
 
 /* Dashboard */
@@ -403,19 +423,18 @@ input[type=button] {
 #helloMessageContainer {
     padding-left: 1em;
     align-self: center;
+    width: 100%s;
 }
 
 #helloMessage {
     color: whitesmoke;
-    min-width: 16em;
     justify-self: start;
 
 }
 
 #dashboardNav {
-    display: grid;
-    grid-template-columns: 80% 20%;
-
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #dashboardNav a {
@@ -428,7 +447,11 @@ input[type=button] {
 #center {
     color: white;
     align-self: center;
+    justify-self: end;
     justify-items: end;
+    padding: 1em;
+    margin-left: auto;
+    /* Push #center to the far right */
 }
 
 #center a {
@@ -446,20 +469,18 @@ input[type=button] {
 
 
 
-/* Credit Card Template */
+/* Credit Card Visuali */
 
 .creditWrapper {
     box-sizing: border-box;
-    width: 30%;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    /* justify-content: start; */
+    justify-content: start;
     flex-wrap: wrap;
     padding: 2em;
 
 }
-
-
 
 .credit-card {
     background-color: #18181b;
@@ -471,25 +492,27 @@ input[type=button] {
     display: flex;
     flex-direction: column;
     position: relative;
+    /*The CSS overflow property controls what happens to content that is too big to fit into an area.*/
     overflow: hidden;
+    /*ease-in-out specifies a transition effect with a slow start and end */
+
     transition: all 0.5s ease-in-out;
 }
 
-.creditWrapper .credit-card:nth-child(1) {
-    background-color: #090946;
+.card-0 {
+    background-color: #18181b;
     /* First card color */
 }
 
-.creditWrapper .credit-card:nth-child(2) {
-    background-color: #3b3b3f;
+.card-1 {
+    background-color: #090946;
     /* Second card color */
 }
 
-.creditWrapper .credit-card:nth-child(3) {
-    background-color: #2c2c30;
+.card-2 {
+    background-color: #7d7d8b;
     /* Third card color */
 }
-
 
 
 .credit-card:hover {
@@ -545,10 +568,6 @@ input[type=button] {
     border-radius: 100%;
     transform: translateY(190%);
 }
-
-
-
-
 
 
 .MainContainer {
@@ -609,7 +628,6 @@ input[type=button] {
 
 }
 
-/* --------------------------------------------------------------------------------------------------------------- */
 .transAside h2 {
     color: #4d8ff7;
 }
@@ -625,7 +643,6 @@ input[type=button] {
     border-radius: 5px;
 }
 
-/* ----------------------------------------------------------------------------------------- */
 .dot {
     width: 10px;
     height: 10px;
@@ -711,9 +728,10 @@ input[type=button] {
 
 /* Transactions */
 #transactionsNav {
-    display: grid;
-    grid-template-columns: 19% 60% 19%;
-    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    width: 100%;
 }
 
 #transactionsNav a {
@@ -724,7 +742,7 @@ input[type=button] {
 }
 
 #transactionsNav img {
-    padding-right: 1em;
+    /* padding-right: 1em; */
 }
 
 
@@ -734,13 +752,15 @@ input[type=button] {
     width: 75%;
     height: 25%;
     /* height: fit-content; */
+    border-top: 1px solid #a1a1aa;
+    border-bottom: 1px solid #a1a1aa;
 }
 
 .pieChart {
     padding: 1em;
     width: 50%;
     height: 25%;
-
+    /* border-bottom: 1px solid #a1a1aa; */
     /* height: fit-content; */
 
 }
@@ -924,7 +944,7 @@ input[type=button] {
 
     font-size: large;
     margin-top: 1em;
-    width: 24%;
+    width: fit-content;
     border: 1px solid navy;
     border-radius: 5px;
     background-color: navy;
@@ -968,7 +988,7 @@ input[type=button] {
 #actionBox .description {
     width: fit-content;
     color: #81a6e2;
-    font-size: small;
+    font-size: medium;
 }
 
 #actionBox input[type="text"] {

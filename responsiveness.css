@@ -1,0 +1,290 @@
+@media (max-width: 960px) {
+
+    /* INDEX_HOME WEB PAGE  */
+
+    .container4 {
+        height: auto;
+    }
+
+    .container2 div {
+        width: 75%;
+        margin-top: 4em;
+
+    }
+
+    .container3 {
+        display: none;
+    }
+
+
+    #logIntButton {
+        margin-left: 2em;
+        width: 150px;
+        color: whitesmoke;
+        font-size: larger;
+        background-color: #4d8ff7;
+        border: none;
+        border-radius: 5px;
+    }
+
+    #logIntButton:hover {
+        background-color: #669cf3;
+    }
+
+
+
+    #registerButton {
+        margin-left: 2em;
+        padding: 1em;
+        width: 150px;
+        font-size: larger;
+    }
+
+    /* SIGN-UP PAGE */
+
+
+
+    #signUpForm {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        padding-bottom: 1.2em;
+        width: 100%;
+        max-width: none;
+        justify-self: center;
+        min-height: 40em;
+        border-radius: 10px;
+        height: fit-content;
+    }
+
+    #gender label {
+        height: fit-content;
+        padding: 0.15em;
+        width: 6em;
+        min-width: 85px;
+        color: rgb(143, 143, 143);
+    }
+
+    nav .formImg {
+        display: flex;
+        width: 100%;
+        justify-content: start;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    header h1 {
+        font-size: x-large;
+
+    }
+
+
+
+    body {
+
+        background-color: #001433;
+        /* min-width: 400px; */
+        width: 100%;
+    }
+
+
+    .MainContainer {
+        background-color: #bcbfc4;
+        display: grid;
+        width: 100%;
+        grid-template-columns: 100%;
+
+        height: fit-content;
+        /* justify-content: space-between; */
+    }
+
+    .transactionContainer {
+        color: #131335;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+
+    .credit-card {
+        background-color: #18181b;
+        color: #a1a1aa;
+        padding: 30px 30px;
+        border-radius: 0.5rem;
+        width: 250px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+    }
+
+
+    .head {
+        font-size: 0.8em;
+        font-weight: bold;
+    }
+
+    .number {
+        margin-top: auto;
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 0.15em;
+        color: #d4d4d8;
+    }
+
+    .exp {
+        font-size: 0.65em;
+    }
+
+    .exp-date {
+        color: #d4d4d8;
+        font-size: 0.75rem;
+    }
+
+    .circle1 {
+        width: 350px;
+        height: 150px;
+        transform: translateY(-50%) translateX(50%);
+    }
+
+    .circle2 {
+        width: 70px;
+        height: 70px;
+        transform: translateY(150%);
+    }
+
+    .MainContainer .transAside {
+        margin-bottom: 2em;
+        margin-top: 1em;
+        background-color: rgb(228, 226, 223);
+        padding: 0;
+        padding-bottom: 2em;
+    }
+
+    .mainHeader {
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1em;
+        padding-left: 2em;
+        width: 100%;
+        justify-self: start;
+    }
+
+    .mainHeader #ExpenseTracker {
+        margin-top: 1em;
+        width: 62%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .transactionContainer {
+        box-sizing: border-box;
+
+        color: #131335;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 0.5em;
+        margin: 0;
+    }
+
+    .MainContainer .transAside {
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-bottom: 1em;
+        margin-top: 1em;
+        background-color: rgb(228, 226, 223);
+    }
+
+    /* Transactions */
+    #transactionsNav {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 1em;
+    }
+
+    .MainContainerTransactions {
+        background-color: #bcbfc4;
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2%;
+    }
+
+    .mainHeader {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1em;
+        padding-left: 2em;
+        width: 100%;
+        justify-self: start;
+        padding-right: 1em;
+
+    }
+
+    .mainHeader #ExpensesByMonth {
+        border-top: 1px solid #a1a1aa;
+        width: 100%;
+        border-left: none;
+        padding-left: 0;
+        margin-top: 1em;
+
+        /* display: flex; */
+        /* justify-content: start; */
+    }
+
+
+    .barChart {
+        padding: 1em;
+        justify-items: center;
+        width: 75%;
+        height: 20%;
+        /* height: fit-content; */
+        border-top: 1px solid #a1a1aa;
+        border-bottom: 1px solid #a1a1aa;
+    }
+
+    .pieChart {
+        padding: 1em;
+        width: 50%;
+        height: 25%;
+        border-top: 1px solid #a1a1aa;
+        border-bottom: 1px solid #a1a1aa;
+
+    }
+
+    #tableHeaderMonthSelected {
+        font-size: large;
+    }
+
+    #ListOfMonthExpenses {
+        box-sizing: border-box;
+        margin-top: 2em;
+        width: 100%;
+        justify-self: center;
+        font-size: small;
+
+    }
+
+    .row {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 30% 20% 30% 20%;
+    }
+
+    .row div {
+        width: auto;
+    }
+
+}
